@@ -14,12 +14,16 @@ import java.util.Map;
  */
 public class HttpUtils {
     public static List<String> getLines(String url, Map<String, String> cookies) {
+        return  getLines(url, cookies, "\\n");
+    }
+
+    public static List<String> getLines(String url, Map<String, String> cookies, String separator) {
         try {
             Document doc = Jsoup.connect(url)
                     .userAgent("Mozilla")
                     .cookies(cookies)
                     .get();
-            return Arrays.asList(doc.body().text().split(" "));
+            return Arrays.asList(doc.body().wholeText().split(separator));
         } catch (IOException ioe) {
             return Collections.emptyList();
         }

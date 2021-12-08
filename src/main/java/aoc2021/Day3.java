@@ -14,7 +14,7 @@ public class Day3 extends AoC2021 {
     private final static String INPUT_URL = "https://adventofcode.com/2021/day/3/input";
 
     public static void main(String[] args) {
-        List<String> lines = HttpUtils.getLines(INPUT_URL, COOKIES);
+        List<String> lines = HttpUtils.getLines(INPUT_URL, COOKIES, " ");
         System.out.println(partOne(lines));
         System.out.println(partTwo(lines));
     }
