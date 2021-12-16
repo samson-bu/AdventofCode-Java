@@ -14,3 +14,7 @@ static {
 以上值可从浏览器请求中获得，如下图：
 ![image](cookies.png)
 
+
+
+# 有趣的站点
+https://paiv.github.io/aoc2021/day/11/
